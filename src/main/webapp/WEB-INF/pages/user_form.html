@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Form user</title>
+</head>
+<body>
+<h1 th:text="${user.id} == null ? 'Add user' : 'update user'"></h1>
+<form th:action="@{/users/save}" method="post">
+  <input type="hidden" name="id" th:value="${user.id}" />
+  <p>
+    Name: <input type="text" name="name" th:value="${user.name}" />
+  </p>
+  <p>
+    Surname: <input type="text" name="surname" th:value="${user.surname}" />
+  </p>
+  <p>
+    Age: <input type="text" name="age" th:value="${user.age}" />
+  </p>
+  <p>
+    <button type="submit">Save</button>
+  </p>
+</form>
+<a th:href="@{/users}">Return user list</a>
+</body>
+</html>
