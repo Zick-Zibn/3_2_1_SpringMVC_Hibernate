@@ -7,13 +7,12 @@ import web.dao.UserDAO;
 import web.model.User;
 
 import java.util.List;
-@Service
 
+@Service
 public class UserServiceImpl implements UserService {
 
     private final UserDAO userDAO;
 
-    @Autowired
     public UserServiceImpl(UserDAO userDAO) {
         this.userDAO = userDAO;
     }
