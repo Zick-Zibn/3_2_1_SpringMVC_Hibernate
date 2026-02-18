@@ -26,7 +26,6 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    @Transactional
     public void saveUser(User user) {
         if (user.getId() == null) {
             em.persist(user);
@@ -35,7 +34,6 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    @Transactional
     public void deleteUser(Long id) {
         User user = em.find(User.class, id);
         if (user != null) {
