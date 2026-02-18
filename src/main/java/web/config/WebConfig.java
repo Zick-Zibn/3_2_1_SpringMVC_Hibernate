@@ -63,7 +63,7 @@ public class WebConfig implements WebMvcConfigurer {
     public DataSource dataSource() {
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://localhost:3306/test_db?useSSL=false&characterEncoding=UTF-8");
+        ds.setUrl("jdbc:mysql://localhost:3306/test_db");
         ds.setUsername("jpauser");
         ds.setPassword("jpapwd");
         return ds;

@@ -5,7 +5,6 @@ import web.model.User;
 
 import java.util.List;
 
-@Service
 public interface UserService {
     User getUserById(Long id);
 
